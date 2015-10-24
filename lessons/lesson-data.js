@@ -2,8 +2,8 @@ const LESSONS_DATA = [{
   component: require('./1_hello_world'),
   name: 'Hello World',
 }, {
-  component: require('./2_rendering'),
-  name: 'Rendering',
+  component: require('./2_tools_and_workflow'),
+  name: 'Tools and Workflow',
 }, {
   component: require('./3_components'),
   name: 'Components',
