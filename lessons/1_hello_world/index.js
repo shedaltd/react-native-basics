@@ -7,7 +7,6 @@
  * Note:
  * React Elements can be created in a number of different ways.
  * During these lessons we will only be using React.createClass({});
- * @type {[type]}
  */
 const React = require('react-native');
 const {View, Text} = React;
