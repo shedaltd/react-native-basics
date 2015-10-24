@@ -1,6 +1,6 @@
 const React = require('react-native');
 const LESSONS_DATA = require('./lesson-data');
-const {TouchableOpacity, ListView, Text} = React;
+const {TouchableOpacity, ListView, Text, StyleSheet} = React;
 
 const Lessons = React.createClass({
     getInitialState: function () {
@@ -15,6 +15,7 @@ const Lessons = React.createClass({
       },
       render: function () {
         return (<ListView
+            contentContainerStyle={styles.container}
             dataSource={this.state.lessons}
             renderRow={(lessonNumber) => (<TouchableOpacity onPress={() => this.props.navigator.push(LESSONS_DATA[lessonNumber])}>
               <Text>
@@ -24,5 +25,15 @@ const Lessons = React.createClass({
         </ListView>);
       }
 });
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#F5FCFF',
+  }
+});
+
 
 module.exports = Lessons;
