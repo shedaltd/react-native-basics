@@ -42,4 +42,4 @@ const Component = React.createClass({
     }
 });
 
-module.exports = Components;
+module.exports = Component;
