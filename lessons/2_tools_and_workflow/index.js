@@ -34,13 +34,14 @@ const ToolsAndWorkflow = React.createClass({
                 </TouchableOpacity>
             </View>
             <TouchableOpacity onPress={this.lag}>
-                <Text>Create JS LAG</Text>
+                <Text>Create UI LAG</Text>
             </TouchableOpacity>
             <Text>{this.state.i}</Text>
         </View>);
     },
     lag: function () {
-        for(let i = 0; i < 1000; i++) {
+        for(let i = 0; i < 99999; i++) {
+
             setTimeout(() => this.setState({i: i}));
         }
     }

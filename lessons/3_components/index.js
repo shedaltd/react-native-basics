@@ -1,7 +1,7 @@
 /**
  * React works by building a in memory representation of the view hierarchy, this is known as the Virtual DOM
  * This abstraction allows us to declaritively represent our views as a tree of functions
- *
+
  *
  * Components are defined in JSX syntax, which is an extension of regular javascript syntax
  * http://facebook.github.io/react/
@@ -24,26 +24,21 @@ const React = require('react-native');
 const {View, Text} = React;
 
 // This is how you define a Component in React, it has a render method which returns a UI-element
-// const SubComponent = React.createClass({
-//     render() {
-//         return (<View>
-//             <Text>SubComponent</Text>
-//         </View>);
-//     }
-// });
+const SubComponent = React.createClass({
+    render() {
+        return (<View>
+            <Text>SubComponent</Text>
+        </View>);
+    }
+});
 
-const Components = React.createClass({
+const Component = React.createClass({
     render() {
         return (<View>
             <Text>
                 Hello World
             </Text>
-            {this.renderSubComponent()}
         </View>);
-    }
-
-    renderSubComponent() {
-        return <SubComponent/>;
     }
 });
 
