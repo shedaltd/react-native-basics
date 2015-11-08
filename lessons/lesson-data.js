@@ -16,9 +16,6 @@ const LESSONS_DATA = [{
 }, {
   component: require('./6_animations'),
   name: 'Animations',
-}, {
-  component: require('./7_app'),
-  name: 'App',
 }];
 
 module.exports = LESSONS_DATA;
