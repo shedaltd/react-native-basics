@@ -3,14 +3,16 @@ const {View, Text, TouchableOpacity, StyleSheet} = React;
 const ReactMotion = require('react-motion/native');
 const {Motion, spring} = ReactMotion;
 const Animations = React.createClass({
-    getInitialState: () => ({open: false}),
+    getInitialState: () => ({location: {
+        x: 0,
+        y: 0
+    }),
     render() {
         return (<View style={styles.container}>
-            {/*TODO: Extend the component below so it doesn't just animate left and right, but up and down aswell.
-                after that is done animate it so it will go to where the user clicks on the screen*/}
-            <Motion style={{translateX: spring(this.state.open ? 200 : 0)}}>
-                {({translateX}) => (
-                    <View style={[styles.box, {transform: [{translateX}]}]}/>
+            {/*TODO: Add a onPress listener and animate the box to the location of the touch using the transform style*/}
+            <Motion style={{x: spring(this.state.location.x), y: spring(this.state.location.y)}}>
+                {({translateX, translateY}) => (
+                    <View style={[styles.box/*, {transform: []}]*/}/>
                 )}
             </Motion>
         </View>);
