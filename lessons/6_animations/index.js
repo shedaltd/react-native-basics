@@ -1,6 +1,6 @@
 const React = require('react-native');
 const {View, Text} = React;
-const HelloWorld = React.createClass({
+const Animations = React.createClass({
     render: function() {
         return (<View>
             <Text>
@@ -10,4 +10,4 @@ const HelloWorld = React.createClass({
     }
 });
 
-module.exports = HelloWorld;
+module.exports = Animations;

@@ -8,37 +8,36 @@
  *
  * In HTML the default components available mirror html, so div, span, section, html, body etc... all exist
  *
- * In react-native the default components must be imported from the libary examples include:
+ * In react-native the default components must be imported from the libary.
  *
+ * examples:
  * View - To layout elements correctly
  * Text - To display text
  * TouchableOpacity and TouchableHighlight - For buttons and touch interactions
  * Navigator - for a generic navigator between routes in our application
  *
  * An exhaustive list can be found on https://facebook.github.io/react-native/docs/getting-started.html
- *
- * Fix the code below to render the 'subcomponent'
  */
 
 const React = require('react-native');
 const {View, Text} = React;
 
-// This is how you define a Component in React, it has a render method which returns a UI-element
-const SubComponent = React.createClass({
-    render() {
-        return (<View>
-            <Text>SubComponent</Text>
-        </View>);
-    }
-});
+// In general yourself to 1 component per Javascript File and use require() to get them. This keeps your code concise and simpler to follow
+const SubComponent = require('./SubComponent');
 
+const name = 'Bendict Hobart!';
 const Component = React.createClass({
     render() {
         return (<View>
             <Text>
-                Hello World
+                {/*TODO: Render your own name, if your names also Benedict Hobart feel free to delete this line*/}
+                Hello {name}
             </Text>
+            {this.renderSubComponent()}
         </View>);
+    },
+    renderSubComponent() {
+        //TODO: Fill this in
     }
 });
 

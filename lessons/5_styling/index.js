@@ -82,8 +82,7 @@ const styles = StyleSheet.create({
         marginTop: 20
     },
     tabs: {
-        flexDirection: 'row',
-        flex: 1
+        flexDirection: 'row'
     },
     tab: {
         margin: 10
