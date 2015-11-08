@@ -9,13 +9,11 @@
  * In general if it is possible to make your component more generic by moving logic into the properties of the component as opposed to state, it should be done
  * By removing state completely from your component you can guarentee that your component is side-effect free, so it will render the same as long as the props are the same
  * By migrating state into props it opens up more possibilites for you component to be reused in the future
- *
- * The objective below is to refactor the children of this component into two components
- * "Display" and "Button"
- * this requires you to take advantage of props and refactor functionality into the props
  */
 const React = require('react-native');
 const {View, Text, TouchableOpacity} = React;
+const Button = require('./Button');
+const Display = require('./Display');
 const PropsAndState = React.createClass({
     getInitialState: function(){
         return {
@@ -24,9 +22,11 @@ const PropsAndState = React.createClass({
     },
     render: function() {
         return (<View>
+            {/*TODO: Refactor into Display*/}
             <Text>
                 {this.state.counter}
             </Text>
+            {/*TODO: Refactor into Button*/}
             <TouchableOpacity onPress={() => this.setState({counter: this.state.counter + 1})}>
                 <Text>
                     Increment
