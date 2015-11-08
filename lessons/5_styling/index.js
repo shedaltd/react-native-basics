@@ -46,6 +46,7 @@ const StylesAndLayout = React.createClass({
 
 const CenterAlign = React.createClass({
     render: function(){
+        //TODO: Style this component
         return (<View>
             <Text>Center Text</Text>
         </View>);
@@ -54,6 +55,7 @@ const CenterAlign = React.createClass({
 
 const TwoColumns = React.createClass({
     render: function(){
+        //TODO: Style this component
         return (<View>
             <View>
                 <Text>Column 1</Text>
@@ -67,6 +69,7 @@ const TwoColumns = React.createClass({
 
 const HeaderFooter = React.createClass({
     render: function(){
+        //TODO: Style this component
         return (<View>
             <View><Text>Header</Text></View>
             <View><Text>Content</Text></View>
@@ -86,7 +89,8 @@ const styles = StyleSheet.create({
     },
     tab: {
         margin: 10
-    }
+    } 
+    //TODO: Fill out Styles for the 3 components, HeaderFooter, TwoColumns, CenterAlign
 });
 
 module.exports = StylesAndLayout;
