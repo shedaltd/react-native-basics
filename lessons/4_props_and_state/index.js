@@ -21,17 +21,14 @@ const PropsAndState = React.createClass({
         };
     },
     render: function() {
+        const increase = () => {
+          this.setState({counter: this.state.counter + 1})
+        };
         return (<View>
             {/*TODO: Refactor into Display*/}
-            <Text>
-                {this.state.counter}
-            </Text>
+            <Display toDisplay={this.state.counter}  />
             {/*TODO: Refactor into Button*/}
-            <TouchableOpacity onPress={() => this.setState({counter: this.state.counter + 1})}>
-                <Text>
-                    Increment
-                </Text>
-            </TouchableOpacity>
+            <Button onPress={increase} />
         </View>);
     }
 });

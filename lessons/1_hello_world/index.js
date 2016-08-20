@@ -14,7 +14,7 @@ const HelloWorld = React.createClass({
     render: function() {
         //TODO: Fill in with a text element containing the words HELLO WORLD!
         return (<View>
-                <Text></Text>
+                <Text>Hey guys welcome to react again</Text>
         </View>);
     }
 });

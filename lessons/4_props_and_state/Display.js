@@ -3,8 +3,11 @@ const {View, Text} = React;
 
 const Display = React.createClass({
     render: function() {
+        const toDisplay = this.props.toDisplay ?  this.props.toDisplay : 'Default';
         return (<Text>
-            Display
+            {toDisplay}
         </Text>);
     }
 });
+
+module.exports = Display;

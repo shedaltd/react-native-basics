@@ -25,11 +25,13 @@ const {View, Text} = React;
 // In general yourself to 1 component per Javascript File and use require() to get them. This keeps your code concise and simpler to follow
 const SubComponent = require('./SubComponent');
 
-const name = 'Bendict Hobart!';
+const name = 'Mike Ebinum!';
 const Component = React.createClass({
     render() {
-        return (<View>
-            <Text>
+        
+        return (
+            <View>
+                <Text>
                 {/*TODO: Render your own name, if your names also Benedict Hobart feel free to delete this line*/}
                 Hello {name}
             </Text>
@@ -38,6 +40,7 @@ const Component = React.createClass({
     },
     renderSubComponent() {
         //TODO: Fill this in
+        return <SubComponent />
     }
 });
 

@@ -18,12 +18,13 @@ const {View, TouchableOpacity, Text, StyleSheet} = React;
 const ToolsAndWorkflow = React.createClass({
     getInitialState: function () {
         return {
-            i: 0
+            i: 0,
+            x: 34
         };
     },
     render: function() {
         console.log('Render Method');
-        return (<View style={styles.container}>
+        return (<View style={[styles.container, {backgroundColor: 'red'}]}>
             <Text>Text Content</Text>
             <View style={styles.buttons}>
                 <TouchableOpacity style={styles.button}>

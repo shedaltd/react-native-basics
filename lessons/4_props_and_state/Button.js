@@ -1,10 +1,16 @@
 const React = require('react-native');
-const {View, Text} = React;
+const {View, Text, TouchableOpacity} = React;
 
 const Button = React.createClass({
     render: function() {
-        return (<Text>
-            Button
-        </Text>);
+
+        return (
+          <TouchableOpacity onPress={this.props.onPress}>
+            <Text>
+                Increment
+            </Text>
+        </TouchableOpacity>);
     }
 });
+
+module.exports = Button;
